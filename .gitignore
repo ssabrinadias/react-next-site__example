@@ -1,0 +1,8 @@
+_tmp
+_next
+.next
+_error/
+
+package-lock.json
+npm-debug.log*
+node_modules/
