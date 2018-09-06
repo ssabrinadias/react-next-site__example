@@ -90,7 +90,7 @@ module.exports = withPlugins(
 				cssModules: true,
 				cssLoaderOptions: {
 					importLoaders: 1,
-					localIdentName: '[path][name]__[local]'
+					localIdentName: '[path][name]__[local]',
 				}
 			}
 		],
