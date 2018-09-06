@@ -2,6 +2,7 @@ _tmp
 _next
 .next
 _error/
+build/
 
 package-lock.json
 npm-debug.log*
