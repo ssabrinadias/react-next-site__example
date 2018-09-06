@@ -74,6 +74,10 @@ const nextConfig = {
 			}
 		);
 
+		config.resolve.alias = {
+			STATIC: path.resolve(__dirname, 'static')
+		};
+
 		if (isServer) {
 			return config;
 		}
@@ -91,6 +95,7 @@ module.exports = withPlugins(
 				cssLoaderOptions: {
 					importLoaders: 1,
 					localIdentName: '[path][name]__[local]',
+					includePaths : 'node_modules'
 				}
 			}
 		],

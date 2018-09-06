@@ -4,7 +4,6 @@ import style from './style.scss';
 const teste = props => {
 	return (
 		<section className={style.teste}>
-        teste
 		</section>
 	);
 };

@@ -1,4 +1,6 @@
 @import '../../static/sass/_variables';
+@import '../../static/sass/_global';
+@import url(../../static/sass/normalize.css);
 .teste {
-    color: $bg-color;
+    color: $secondary-color;
 }
