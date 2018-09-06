@@ -4,7 +4,7 @@ import thunk from 'redux-thunk';
 
 import general from '../service/general/reducer';
 
-const INITIAL_STATE = [];
+const INITIAL_STATE = {};
 
 export function initializeStore(initialState = INITIAL_STATE) {
 	return createStore(
