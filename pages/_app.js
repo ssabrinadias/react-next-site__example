@@ -21,14 +21,14 @@ class MyApp extends App {
     return {pageProps}
   }
 
-  render () {
-    const {Component, pageProps} = this.props
-    return (
-      <Container>
-        <Component {...pageProps} />
-      </Container>
-    )
-  }
+  render() {
+		const { Component, store, pageProps } = this.props;
+		return (
+			<Provider store={store}>
+				<Component {...pageProps} />
+			</Provider>
+		);
+	}
 }
 
 export default withRedux(initializeStore)(MyApp);
