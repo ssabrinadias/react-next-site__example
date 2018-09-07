@@ -3,6 +3,8 @@ _next
 .next
 _error/
 build/
+dist/
+static/fonts
 
 package-lock.json
 npm-debug.log*

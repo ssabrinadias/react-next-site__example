@@ -10,7 +10,6 @@ class Page extends React.Component {
 	render() {
 		return (
 			<div>
-        		<pre>{JSON.stringify(this.props)}</pre>
 				<Layout/>
 			</div>
 		);

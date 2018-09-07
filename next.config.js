@@ -6,7 +6,7 @@ const withSass = require('@zeit/next-sass');
 const commonsChunkConfig = require('@zeit/next-css/commons-chunk-config');
 
 const configDefault = {
-	distDir: 'build',
+	distDir: 'dist',
 	poweredByHeader: false
 };
 
@@ -16,60 +16,28 @@ const nextConfig = {
 
 		config.module.rules.push(
 			{
-				test: /\.(jpe?g|gif|ico)$/,
+				test: /\.(eot|woff2?|ttf|otf)$/,
 				use: [
 					{
 						loader: 'file-loader',
 						options: {
-							name: '[path][name].[ext]',
+							name: '[name].[ext]',
+							outputPath: 'fonts/'
+						}
+					}
+				]
+			},
+			{
+				test: /\.(svg|jpe?g|png|svg|gif|ico)$/,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							name: dev ? '[path][name].[ext]' : '',
+							publicPath: `/_next/static/`,
 							outputPath: './static'
 						}
 					}
-				]
-			},
-
-			{
-				test: /\.(png)$/,
-				use: [
-					{
-						loader: 'file-loader?limit=10000&mimetype=text/html',
-						options: {
-							name:  '[path][name].[ext]',
-							outputPath: './static'
-						}
-					}
-				]
-			},
-			{
-				test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
-				use: [
-					{
-						loader:
-							'url-loader?limit=10000&mimetype=application/font-woff',
-						options: {
-							name: '[path][name].[ext]',
-							outputPath: './fonts'
-						}
-					}
-				]
-			},
-			{
-				test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-				use: [
-					{
-						loader:
-							'url-loader?limit=10000&mimetype=application/octet-stream'
-					}
-				]
-			},
-			{
-				test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-				use: [{ loader: 'file-loader' }]
-			},
-			{
-				test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-				use: [
-					{ loader: 'url-loader?limit=10000&mimetype=image/svg+xml' }
 				]
 			}
 		);
