@@ -1,6 +1,6 @@
-@import '../../static/sass/_variables';
-@import '../../static/sass/_global';
-@import url(../../static/sass/normalize.css);
-.teste {
-    color: $secondary-color;
+@import '../../static/style/base/_global';
+@import url(../../static/style/base/normalize.css);
+
+.top {
+    background: #ccc;
 }
