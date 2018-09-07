@@ -1,3 +1,7 @@
+const path = require('path');
+const aliases = require('./configs/aliases');
+
+
 module.exports = {
 	env: {
 		development: {
@@ -16,6 +20,11 @@ module.exports = {
 						}
 					}
 				]
+			],
+			plugins: [
+				["module-resolver", {
+					"alias": aliases
+				}]
 			]
 		}
 	}

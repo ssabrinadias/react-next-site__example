@@ -7,7 +7,8 @@ const commonsChunkConfig = require('@zeit/next-css/commons-chunk-config');
 
 const configDefault = {
 	distDir: 'dist',
-	poweredByHeader: false
+	poweredByHeader: false,
+	IS_PROD: process.env.NODE_ENV === 'production',
 };
 
 const nextConfig = {
@@ -41,10 +42,6 @@ const nextConfig = {
 				]
 			}
 		);
-
-		config.resolve.alias = {
-			STATIC: path.resolve(__dirname, 'static')
-		};
 
 		if (isServer) {
 			return config;
