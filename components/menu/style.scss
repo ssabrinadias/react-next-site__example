@@ -1,0 +1,27 @@
+@import "../../static/style/abstracts/_variables";
+@import '../../static/style/abstracts/_mixins';
+ul {
+    @include breakpoint(small)  {
+        display: none
+    }
+    li {
+        display: inline-block;
+        a {
+            font-size: 16px;
+            color: $lighten-secondary-color;
+            margin: 0 27px;
+            &:hover{
+                color: $secondary-color;
+            }
+            &.active {                
+                color: $secondary-color;
+            }
+        }
+        &:last-child,
+        &:first-child {
+            a {
+                margin: 0;
+            }
+        }
+    }
+}

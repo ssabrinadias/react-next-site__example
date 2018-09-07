@@ -4,18 +4,18 @@ import Container from '../container'
 import Menu from '../menu'
 import style from './style.scss';
 
-const teste = props => {
+const layout = props => {
 	return (
 		<div>
-			<Container>tessdsdfs</Container>
-			<div className={style.top}>
-				<Header/>
-				<Menu/>
-			</div>
-			
+			<Container>
+				<div className={style.top}>
+						<Header/>
+						<Menu/>
+				</div>
+			</Container>
 			{props.children}
 		</div>
 	);
 };
 
-export default teste;
+export default layout;

@@ -3,7 +3,7 @@ import style from './style.scss';
 
 const teste = props => {
 	return (
-		<div className={style.cores}>
+		<div className={style.container}>
 			{props.children}
 		</div>
 	);

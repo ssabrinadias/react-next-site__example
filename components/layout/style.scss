@@ -3,7 +3,13 @@
 @import url(../../static/style/base/normalize.css);
 
 .top {    
-    @include breakpoint(small) { }
-    @include breakpoint(medium) {  }
-    @include breakpoint(large) {  }   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin-top: 27px; 
+    @include breakpoint(medium)  {
+        margin-top: 50px;
+    }
 }

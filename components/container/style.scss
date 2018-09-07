@@ -1,6 +1,9 @@
 @import '../../static/style/abstracts/_supports';
-.cores {
-    max-width: 1440px;  
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1340px;  
     margin: auto;
-    @extend %defaultMargin;
+    box-sizing: border-box;
+    @extend %defaultPadding;
 }
