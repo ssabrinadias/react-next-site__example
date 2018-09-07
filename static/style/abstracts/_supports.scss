@@ -1,0 +1,15 @@
+@import './_mixins';
+%defaultMargin {
+    @include breakpoint(small) {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    @include breakpoint(medium)  {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    @include breakpoint(large)  {
+        padding-left: 30px;
+        padding-right: 30px;
+    }  
+}

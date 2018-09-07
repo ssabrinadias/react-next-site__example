@@ -1,6 +1,9 @@
 @import '../../static/style/base/_global';
+@import '../../static/style/abstracts/_mixins';
 @import url(../../static/style/base/normalize.css);
 
-.top {
-    background: #ccc;
+.top {    
+    @include breakpoint(small) { }
+    @include breakpoint(medium) {  }
+    @include breakpoint(large) {  }   
 }

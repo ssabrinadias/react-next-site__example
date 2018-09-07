@@ -1,0 +1,6 @@
+@import '../../static/style/abstracts/_supports';
+.cores {
+    max-width: 1440px;  
+    margin: auto;
+    @extend %defaultMargin;
+}
