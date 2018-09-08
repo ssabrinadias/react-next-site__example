@@ -8,13 +8,16 @@ const layout = props => {
 		<section className={style.content}>
             <Container>
                 <div className={style.contentAuxiliar}>
-                    <div className={style.info}>
+                    <div className={style.contentInfo}>
                         <span className={style.description}>Build your</span>
                         <h1 className={style.title}>MODEL <span>R</span></h1>
                     </div>
                     
-                    <div className={style.car}>
+                    <div className={style.contentCar}>
                         <img src={carHome} alt="Model R "/>
+                    </div>
+                    <div className={style.btnStart}>
+                        <a href='#'>Begin</a>
                     </div>
                 </div>
             </Container>

@@ -2,18 +2,22 @@
 @import '../../static/style/abstracts/_mixins';
 @import url(../../static/style/base/normalize.css);
 
-.top {    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
-    width: 100%;
-    margin-top: 27px; 
-    
-    @include breakpoint(medium)  {
-        margin-top: 30px;
-    }
-    @include breakpoint(large)  {
-        margin-top: 50px;
+.layout {
+    &Top {    
+        position: relative;
+        z-index: 20;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        width: 100%;
+        margin-top: 25px; 
+        
+        @include breakpoint(medium)  {
+            margin-top: 25px;
+        }
+        @include breakpoint(large)  {
+            margin-top: 25px;
+        }
     }
 }

@@ -8,7 +8,7 @@ const layout = props => {
 	return (
 		<div>
 			<Container>
-				<div className={style.top}>
+				<div className={style.layoutTop}>
 					<Header/>
 					<Menu/>
 				</div>

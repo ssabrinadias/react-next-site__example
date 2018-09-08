@@ -5,8 +5,9 @@
 .title {
     position: relative;
     left: -5px;
+    margin-top: -5px;
     color: $secondary-color;
-    font-weight: 300;
+    font-weight: $fontLight;
     font-size: 90px;
     letter-spacing: 7.5px; 
     @extend %transition;
@@ -20,8 +21,12 @@
         left: -10px;
         font-size: 150px;
     }
+    @include breakpoint(nano)  {//size especial
+        font-size: 69px;
+    }
+    
     span {
-        font-weight: 500;
+        font-weight: $fontMedium;
         color: $primary-color;        
         display: inline-block;
         margin-left: -10px;
@@ -31,7 +36,7 @@
     }
 }
 .description {
-    font-weight: 400;
+    font-weight: $fontRegular;
     font-size: 20px;
     color: $primary-color; 
     letter-spacing: 7.23px;    
@@ -45,6 +50,42 @@
     }
 }
 
+.btnStart {
+    display: block;
+    width: 100%;
+    margin-top: -12px;
+    font-size: 16px;
+    font-weight: $fontRegular;
+    text-transform: uppercase;
+    text-align: center;
+    a {
+        position: relative;
+        display: inline-block;
+        letter-spacing: 10px;
+        @extend %transition;
+        &:before {
+            content:'';
+            position: absolute;
+            top: 2px;
+            right: -25px;
+            background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjFweCIgaGVpZ2h0PSIxOHB4IiB2aWV3Qm94PSIwIDAgMjEgMTgiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUwLjIgKDU1MDQ3KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5Db21iaW5lZCBTaGFwZTwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJMaXR0bGUtZ3VpZGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC03MDQuMDAwMDAwLCAtMTM3MS4wMDAwMDApIiBmaWxsPSIjQUIxNzI1IiBmaWxsLXJ1bGU9Im5vbnplcm8iPgogICAgICAgICAgICA8cGF0aCBkPSJNNzIxLjUwMTc3NywxMzc4LjUgTDcxNy4yMDAwMTYsMTM3Mi42MzU2MyBDNzE2Ljg2ODY3OSwxMzcyLjE4MzkzIDcxNi45NTgyNzEsMTM3MS41NDMxOCA3MTcuNDAwMTI1LDEzNzEuMjA0NDcgQzcxNy44NDE5NzksMTM3MC44NjU3NSA3MTguNDY4NzczLDEzNzAuOTU3MzQgNzE4LjgwMDEwOSwxMzcxLjQwOTAzIEw3MjQuNDIxMDI1LDEzNzkuMDcxNzQgQzcyNC42NzgyNjUsMTM3OS40MjI0MiA3MjQuNjc5MzUsMTM3OS44OTkxNiA3MjQuNDIzNzA4LDEzODAuMjUxMDEgTDcxOC44MDI4NDksMTM4Ny45ODcyMSBDNzE4LjQ3MzU0LDEzODguNDQwNDUgNzE3Ljg0NzE2MiwxMzg4LjUzNDk3IDcxNy40MDM3OTYsMTM4OC4xOTgzMyBDNzE2Ljk2MDQyOSwxMzg3Ljg2MTY5IDcxNi44Njc5NjcsMTM4Ny4yMjEzNiA3MTcuMTk3Mjc2LDEzODYuNzY4MTIgTDcyMS43NTE0NzcsMTM4MC41IEw3MDUsMTM4MC41IEM3MDQuNDQ3NzE1LDEzODAuNSA3MDQsMTM4MC4wNTIyOCA3MDQsMTM3OS41IEM3MDQsMTM3OC45NDc3MiA3MDQuNDQ3NzE1LDEzNzguNSA3MDUsMTM3OC41IEw3MjEuNTAxNzc3LDEzNzguNSBaIiBpZD0iQ29tYmluZWQtU2hhcGUiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==');
+            width: 21px;
+            height: 20px;
+            display: block;
+            background-repeat: no-repeat;
+            background-size: 79%;
+        }
+        &:hover,
+        &:active {
+            color: $secondary-color;
+        }
+        
+        &:hover{
+            transform: scale(1.1,1.1)
+        }
+    }
+}
+
 .content {
     position: absolute;
     display: flex;
@@ -53,23 +94,27 @@
     align-items: center;
     justify-content: center;
     width: 100%;       
-    padding-top: 107px;
+    padding-top: 50px;
     
     &Auxiliar {
         display: flex;
         flex-wrap: wrap; 
         max-width: 960px;
         margin: auto;
+        @include breakpoint(medium)  {
+            position: relative;
+            top: -15px;
+        }
     }
 
-    .info {
+    &Info {
         width: 100%;    
         margin-left: 25px;    
         @include breakpoint(medium)  {
             margin-left: 0;            
         }
     }
-    .car {
+    &Car {
         position: relative;
         justify-content: center;
         width: 100%;
@@ -81,6 +126,10 @@
         }
         @include breakpoint(large)  {
             margin-top: -78px;
+        }
+
+        @include breakpoint(nano)  { //size especial
+            margin-top: -39px;
         }
 
         img {

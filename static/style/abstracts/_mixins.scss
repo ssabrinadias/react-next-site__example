@@ -1,4 +1,7 @@
 @mixin breakpoint($point) {
+    @if $point == nano {
+        @media only screen and (max-width: 405px)  { @content; }
+    }
     @if $point == small {
         @media only screen and (max-width: 599px)  { @content; }
     }
