@@ -39,6 +39,9 @@
         color: $primary-color;
         font-weight: $fontMedium;
         @include breakpoint(medium)  {
+            font-size: 39px;
+        }
+        @include breakpoint(large)  {
             font-size: 42px;
         }
         span {
@@ -47,8 +50,9 @@
     }
     &Description {
         font-size: 14px;       
-        @include breakpoint(medium)  {
+        @include breakpoint(large)  {
             font-size: 18px;
+            letter-spacing: 1.1px;
         }
     }
 }
