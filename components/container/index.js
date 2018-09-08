@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './style.scss';
 
-const teste = props => {
+const container = props => {
 	return (
 		<div className={style.container}>
 			{props.children}
@@ -9,4 +9,4 @@ const teste = props => {
 	);
 };
 
-export default teste;
+export default container;

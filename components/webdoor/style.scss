@@ -1,0 +1,94 @@
+@import "../../static/style/abstracts/_variables";
+@import "../../static/style/abstracts/_mixins";
+@import '../../static/style/abstracts/_supports';
+
+.title {
+    position: relative;
+    left: -5px;
+    color: $secondary-color;
+    font-weight: 300;
+    font-size: 90px;
+    letter-spacing: 7.5px; 
+    @extend %transition;
+    @include breakpoint(medium)  {
+        letter-spacing: 12.5px;
+        left: -10px;
+        font-size: 140px;
+    }
+    @include breakpoint(large)  {
+        letter-spacing: 12.5px;
+        left: -10px;
+        font-size: 150px;
+    }
+    span {
+        font-weight: 500;
+        color: $primary-color;        
+        display: inline-block;
+        margin-left: -10px;
+        @include breakpoint(medium)  {
+            margin-left: 0;
+        }        
+    }
+}
+.description {
+    font-weight: 400;
+    font-size: 20px;
+    color: $primary-color; 
+    letter-spacing: 7.23px;    
+    @include breakpoint(medium)  {
+        letter-spacing: 10.84px;   
+        font-size: 25px;
+    }
+    @include breakpoint(large)  {
+        letter-spacing: 10.84px;   
+        font-size: 30px;
+    }
+}
+
+.content {
+    position: absolute;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;       
+    padding-top: 107px;
+    
+    &Auxiliar {
+        display: flex;
+        flex-wrap: wrap; 
+        max-width: 960px;
+        margin: auto;
+    }
+
+    .info {
+        width: 100%;    
+        margin-left: 25px;    
+        @include breakpoint(medium)  {
+            margin-left: 0;            
+        }
+    }
+    .car {
+        position: relative;
+        justify-content: center;
+        width: 100%;
+        margin: auto;
+        margin-top: -52px;
+        max-width: 672.51px;
+        @include breakpoint(medium)  {
+            margin-top: -78px;
+        }
+        @include breakpoint(large)  {
+            margin-top: -78px;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            
+            @extend %transition;
+        }
+    }
+}

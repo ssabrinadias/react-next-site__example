@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import Layout from '../components/layout'
 import Container from '../components/container'
+import Webdoor from '../components/webdoor'
 
 class Page extends React.Component {
 	constructor(props) {
@@ -12,10 +13,10 @@ class Page extends React.Component {
 	render() {
 		return (
 			<Layout>
-				<main>
-					<Container>
-						
-					</Container>
+				<main>					
+					<Webdoor/>
+					{/* <Container>
+					</Container> */}
 				</main>
 			</Layout>
 		);

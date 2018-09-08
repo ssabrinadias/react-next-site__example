@@ -9,7 +9,11 @@
     flex-wrap: nowrap;
     width: 100%;
     margin-top: 27px; 
+    
     @include breakpoint(medium)  {
+        margin-top: 30px;
+    }
+    @include breakpoint(large)  {
         margin-top: 50px;
     }
 }

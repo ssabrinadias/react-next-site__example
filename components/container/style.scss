@@ -1,9 +1,20 @@
 @import '../../static/style/abstracts/_supports';
-.container {
+
+%common {    
     display: flex;
     width: 100%;
-    max-width: 1340px;  
+    max-width: 1260px;  
+    min-width: 320px;
     margin: auto;
     box-sizing: border-box;
+}
+.container {
+    @extend %common;
     @extend %defaultPadding;
+}
+
+.containerFluid {
+    @extend %common;  
+    @extend %defaultPadding;  
+    padding-right: 0;
 }

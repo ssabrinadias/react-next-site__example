@@ -9,8 +9,8 @@ const layout = props => {
 		<div>
 			<Container>
 				<div className={style.top}>
-						<Header/>
-						<Menu/>
+					<Header/>
+					<Menu/>
 				</div>
 			</Container>
 			{props.children}
