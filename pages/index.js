@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import axios from 'axios';
 import Layout from '../components/layout'
 import Container from '../components/container'
 import Webdoor from '../components/webdoor'
@@ -8,7 +7,7 @@ import Inforow from '../components/inforow'
 
 class Page extends React.Component {
 	constructor(props) {
-    super(props);
+    	super(props);
 	}
 
 	render() {

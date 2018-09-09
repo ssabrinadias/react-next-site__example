@@ -1,0 +1,26 @@
+@import '../build/style.scss';
+@import "../../static/style/abstracts/_variables";
+
+.engine {
+    display: flex;
+    width: 100%;
+    .active {
+        background: red;
+    }
+    &Image {
+        flex: 1
+    }
+
+    &Options {
+        flex: 1;
+
+        &List {
+            &>li {
+                display: block;
+                height: 93px;
+                background: $bg-color;
+                margin-top: 60px;
+            }
+        }
+    }
+}

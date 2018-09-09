@@ -13,6 +13,7 @@ class MyApp extends App {
     let { req, store } = ctx;
     if(req) {
       const general = await generalServer({store})
+      // req.params.id //todo caso atualize a pagina
     }
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps(ctx)
