@@ -14,23 +14,34 @@
 
     &Image {
         display: block;
-        flex-basis: 360px;
-        // transform: rotate(-90deg);        
-        @include breakpoint(large)  {
+        transform: rotate(90deg);
+        height: 100vw;
+        overflow: hidden;
+        margin-bottom: -50%;
+
+        @include breakpoint(large)  {            
+            margin-bottom: 0;
+            overflow: initial;
+            flex-basis: 360px;
             transform: rotate(0);
             width: 100%;
+            height: auto;
         }
         img {
             display: block;
-            height: auto;
+            height: 100vw;
             @include breakpoint(large)  {
+                height: auto;
                 width: 100%;
             }
         }
     }
-    &Options {           
-        margin-top: 80px;    
+    &Options {             
+        position: relative;
+        margin-top: 10px;  
+        z-index: 10;
         @include breakpoint(large)  {
+            margin-top: 80px;    
             flex-direction: row;
         }
         &List {
@@ -53,8 +64,7 @@
                     height: 100%;
                     letter-spacing: 2.83px;
 
-                    li {
-                        padding: 15px;                        
+                    li {                        
                         @include breakpoint(large)  {
                             padding: 30px;  
                         }
@@ -82,15 +92,15 @@
                         }
                         &:nth-child(4) {
                             position: relative;
+                            input[type="radio"] {
+                                display: none;
+                            }
                             span {
-                                position: absolute;
                                 display: block;
-                                top: 0;
-                                left: 0;
-                                z-index: 10;
-                                background: $bg-color;
-                                height: 100%;
-                                width: 100%;
+                                width: 22px;
+                                height: 22px;
+                                background: #fff;
+                                border-radius: 122px;
                             }
                         }
                     }
@@ -103,6 +113,11 @@
                         &:nth-child(1) {
                             span {
                                 color: $primary-color
+                            }
+                        }
+                        &:nth-child(4) {
+                            span {
+                                background: $primary-color;
                             }
                         }
                     }

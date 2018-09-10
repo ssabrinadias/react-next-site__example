@@ -1,21 +1,6 @@
 const INITIAL_STATE = {
-	model : {
-		type: '-',
-		price: '-',
-		engine: {
-			type: '-',
-			price: '-'
-		},
-		color: {
-			type: '-',
-			price: '-'
-		},
-		wheels: {
-			type: '-',
-			price: '-'
-		}
-	},
-	total: '-'
+	steps: {},
+	total: ''
 };
 
 const choices = (state = INITIAL_STATE, action) => {
@@ -25,6 +10,16 @@ const choices = (state = INITIAL_STATE, action) => {
 				...state,
 				...action.info
 			};
+		case 'UPDATE_ENGINE':
+			return Object.assign({}, state, {
+				steps : {
+					engine: {
+						type: action.engine.type,
+						kwh: action.engine.kwh, 
+						price: action.engine.price  
+					}
+				}
+			})
 		default:
 			return state;
 	}

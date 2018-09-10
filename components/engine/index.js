@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import {bindActionCreators} from 'redux'
 import style from './style.scss';
+import {actionEngine} from './action';
 import engineOne from '../../static/images/engine-1.png'
 import engineTwo from '../../static/images/engine-2.png'
 
@@ -8,6 +10,9 @@ class Engine extends React.Component {
 	constructor(props) {
         super(props);
         const firstChoice = props.engines[Object.keys(props.engines)[0]];
+
+        props.actionEngine(firstChoice)
+        
         this.state = {
             image: firstChoice.image,
             selected : firstChoice.id,
@@ -16,17 +21,20 @@ class Engine extends React.Component {
 
     changeOption(e){
         let el = e.target;
-        return this.setState({
+        this.setState({
             image: el.value,
             selected: el.id
         })
+        
+        return (
+            this.props.actionEngine(...this.props.engines.filter((item)=>(item.id == el.id)))
+        )
     }
 
     engineOptions({id, image, kwh, range, type}){
         
         let activeInput = this.state.selected == id ? 'checked' : '';
         let activeClass = this.state.selected == id ? style.active: '';
-        
         return(
             <li key={id} className={[style.items, activeClass].join(' ')}>
                 <label htmlFor={id}>
@@ -79,8 +87,15 @@ class Engine extends React.Component {
 	}
 }
 
-const mapStateToProps = ({general}) => (
-    {engines: general.data.engine.items}
+const mapStateToProps = (props) => (
+    {
+        engines: props.general.data.engine.items,
+        geral: props
+    }
 );
 
-export default connect(mapStateToProps)(Engine);
+const mapDispatchToProps = (dispach) => {
+    return bindActionCreators({actionEngine},dispach)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Engine);

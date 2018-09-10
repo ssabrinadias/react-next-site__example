@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 import style from './style.scss';
 import Container from '../container'
 import Engine from '../engine'
+import Summary from '../summary'
 
 class BuildPage extends React.Component {
 	constructor(props) {
         super(props);
-        console.log('props', props)
     }
     
     renderPage(actual) {
@@ -26,7 +26,7 @@ class BuildPage extends React.Component {
                 <Container>
                     {this.renderPage(actualPage)}
                 </Container>
-                {/* <footer>footer</footer> */}
+                <Summary steps={this.props.choices.steps}/>
 			</div>
 		);
 	}

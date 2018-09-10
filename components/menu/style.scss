@@ -1,15 +1,15 @@
 @import "../../static/style/abstracts/_variables";
 @import '../../static/style/abstracts/_supports';
-@import '../../static/style/abstracts/_mixins';//´provisorio
+@import '../../static/style/abstracts/_mixins';
 
-nav {
+.menu {
     position: relative;
     display: inline-block;
     flex: 1;
     flex-direction: row;
     overflow: auto;
     white-space: nowrap;    
-
+    overflow-y: hidden;
     @media only screen and (max-width: 820px) {  
         margin-right: -30px;    
         &::before {
@@ -24,19 +24,13 @@ nav {
             z-index: 10;
         }
     }
-    ul {    
+    &List {        
         box-sizing: border-box;    
         display: block;
         text-align: right;
-        
-       
-        @include breakpoint(medium)  { 
-        }
-
-        li {
+        margin-bottom: 3px;
+        &Item {
             display: inline-block;
-
-
             a {
                 position: relative;
                 display: block;
@@ -44,7 +38,6 @@ nav {
                 color: $lighten-secondary-color;
                 margin: 0 27px;
                 @extend %transition;
-
                 &:before {                
                     content: '';
                     position: absolute;
@@ -69,6 +62,7 @@ nav {
                     }
                 }
             }
+            
             &:last-child {
                 a {
                     margin-right: 0;

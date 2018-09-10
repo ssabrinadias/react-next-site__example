@@ -1,7 +1,8 @@
 import React from 'react';
-import carHome from '../../static/images/car-home.png'
-import Link from 'next/link'
-import Container from '../container'
+import carHome from '../../static/images/car-home.png';
+import Link from 'next/link';
+import Container from '../container';
+import Button from '../button';
 import style from './style.scss';
 
 const layout = props => {
@@ -21,11 +22,12 @@ const layout = props => {
                         <img src={carHome} alt="Model R "/>
                     </div>
 
-                    <div className={style.btnStart}>
-                        <Link as={`/build/engine`} href={`/build?step=engine`}>
-                            <a>Begin</a>
-                        </Link>
-                    </div>
+                    <Button
+                        mask = '/build/engine'
+                        link = '/build?step=engine'
+                        status = 'start'
+                        text = 'Begin'
+                    />
 
                 </div>
 
