@@ -28,13 +28,14 @@ class Engine extends React.Component {
         let activeClass = this.state.selected == id ? style.active: '';
         
         return(
-            <li key={id} className={activeClass}>
+            <li key={id} className={[style.items, activeClass].join(' ')}>
                 <label htmlFor={id}>
                     <ul>
-                        <li>{kwh}{type}</li>
-                        <li>{kwh}kWh</li>
-                        <li>{range}miles range</li>
+                        <li>{kwh}<span>{type}</span></li>
+                        <li>{kwh}<span>kWh</span></li>
+                        <li>{range}<span>miles range</span></li>
                         <li>
+                            <span></span>
                             <input
                                 type = "radio"
                                 name = "engine"

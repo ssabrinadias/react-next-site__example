@@ -1,25 +1,112 @@
 @import '../build/style.scss';
 @import "../../static/style/abstracts/_variables";
+@import "../../static/style/abstracts/_mixins";
 
 .engine {
     display: flex;
     width: 100%;
-    .active {
-        background: red;
+    justify-content: space-between; 
+    flex-direction: column;
+
+    @include breakpoint(large)  {
+        flex-direction: row;  
     }
+
     &Image {
-        flex: 1
+        display: block;
+        flex-basis: 360px;
+        // transform: rotate(-90deg);        
+        @include breakpoint(large)  {
+            transform: rotate(0);
+            width: 100%;
+        }
+        img {
+            display: block;
+            height: auto;
+            @include breakpoint(large)  {
+                width: 100%;
+            }
+        }
     }
-
-    &Options {
-        flex: 1;
-
+    &Options {           
+        margin-top: 80px;    
+        @include breakpoint(large)  {
+            flex-direction: row;
+        }
         &List {
             &>li {
                 display: block;
-                height: 93px;
+                height: 90px;
                 background: $bg-color;
-                margin-top: 60px;
+                padding: 12px;
+                box-sizing: border-box;
+                color: #A8A8A8;
+                margin-top: 10px;
+                @include breakpoint(large)  {           
+                    margin-top: 50px; 
+                }
+                ul {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    height: 100%;
+                    letter-spacing: 2.83px;
+
+                    li {
+                        padding: 15px;                        
+                        @include breakpoint(large)  {
+                            padding: 30px;  
+                        }
+                        
+                        &:nth-child(1) {
+                            font-size: 22px;
+                            @include breakpoint(large)  {
+                                font-size: 34px;
+                            }
+                            font-weight: $fontLight;
+                            span {
+                                font-weight: $fontMedium;
+                            }
+                        }
+                        &:nth-child(2),
+                        &:nth-child(3) {
+                            font-size: 16px;
+                            font-weight: $fontMedium;
+                            @include breakpoint(large)  {
+                                font-size: 22px;
+                            }
+                            span {
+                                font-weight: $fontRegular;
+                            }
+                        }
+                        &:nth-child(4) {
+                            position: relative;
+                            span {
+                                position: absolute;
+                                display: block;
+                                top: 0;
+                                left: 0;
+                                z-index: 10;
+                                background: $bg-color;
+                                height: 100%;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }            
+            .active {
+                color: $secondary-color;
+                ul {
+                    li {
+                        &:nth-child(1) {
+                            span {
+                                color: $primary-color
+                            }
+                        }
+                    }
+                }
             }
         }
     }
