@@ -2,7 +2,6 @@ _tmp
 _next
 .next
 _error/
-build/
 dist/
 
 package-lock.json
