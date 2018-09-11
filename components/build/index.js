@@ -18,15 +18,26 @@ class BuildPage extends React.Component {
             // case 'engine': <Engine/>
         }
     }
-    
+
+    sum(initial){
+        return Object.keys(initial).reduce(( init, elem ) => {
+            return init + initial[elem].price;
+        }, 0 );
+    }
+
 	render() {
         let actualPage = this.props.actualPage;
+        let steps = this.props.choices.steps;
+        console.log('aquiiijsdfksd', this.props)
 		return (
 			<div>
                 <Container>
                     {this.renderPage(actualPage)}
                 </Container>
-                <Summary steps={this.props.choices.steps}/>
+                <Summary 
+                    steps = {steps}
+                    total = {this.sum(steps)}    
+                />
 			</div>
 		);
 	}

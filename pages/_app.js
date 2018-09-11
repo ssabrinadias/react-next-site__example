@@ -5,6 +5,7 @@ import { initializeStore } from '../store';
 import { Provider } from 'react-redux';
 import axios from 'axios';
 import generalServer from '../service/general'
+import choicesServer from '../service/choices'
 
 
 class MyApp extends App {
@@ -13,7 +14,8 @@ class MyApp extends App {
     let { req, store } = ctx;
     if(req) {
       const general = await generalServer({store})
-      // req.params.id //todo caso atualize a pagina
+      // await choicesServer({store, general})
+
     }
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps(ctx)

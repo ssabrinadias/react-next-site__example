@@ -31,10 +31,10 @@ class Engine extends React.Component {
         )
     }
 
-    engineOptions({id, image, kwh, range, type}){
-        
+    engineOptions({id, image, kwh, range, type, price}){
         let activeInput = this.state.selected == id ? 'checked' : '';
-        let activeClass = this.state.selected == id ? style.active: '';
+        let activeClass = this.state.selected == id ? style.active: ''; 
+        
         return(
             <li key={id} className={[style.items, activeClass].join(' ')}>
                 <label htmlFor={id}>
@@ -52,6 +52,7 @@ class Engine extends React.Component {
                                 onChange = {e=> this.changeOption(e)}
                                 checked = {activeInput}
                             />
+                            {id!=1 && (<div className={style.itemsPrice}>+${price}</div>)}
                         </li>
                     </ul>
                 </label>                
@@ -70,13 +71,14 @@ class Engine extends React.Component {
                 <div className={style.engineOptions}>
                     <h1 className={style.title}>Engine</h1>
                     <ul className={style.engineOptionsList}>
-                        {this.props.engines.map(({id, image, kwh, range, type})=>(
+                        {this.props.engines.map(({id, image, kwh, range, type, price})=>(
                             this.engineOptions({
                                 id,
                                 image,
                                 kwh,
                                 range,
-                                type
+                                type,
+                                price
                             })
                         ))}
                     </ul>

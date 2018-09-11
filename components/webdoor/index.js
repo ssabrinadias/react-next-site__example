@@ -26,7 +26,7 @@ const layout = props => {
                         mask = '/build/engine'
                         link = '/build?step=engine'
                         status = 'start'
-                        text = 'Begin'
+                        text = 'BEGIN'
                     />
 
                 </div>

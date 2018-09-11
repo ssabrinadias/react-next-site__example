@@ -102,6 +102,15 @@
                                 background: #fff;
                                 border-radius: 122px;
                             }
+                            .itemsPrice {
+                                display: none;
+                                position: absolute;
+                                bottom: -30px;
+                                right: 0;
+                                font-size: 22px;
+                                font-weight: $fontRegular;
+                                color: $primary-color
+                            }
                         }
                     }
                 }
@@ -118,6 +127,10 @@
                         &:nth-child(4) {
                             span {
                                 background: $primary-color;
+                            }
+                            
+                            .itemsPrice {
+                                display: block;
                             }
                         }
                     }
