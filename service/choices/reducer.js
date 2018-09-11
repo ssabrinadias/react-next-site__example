@@ -2,7 +2,7 @@ const INITIAL_STATE = {};
 
 const choices = (state = INITIAL_STATE, action) => {
 	switch (action.type) {
-		case 'SERVER_CHOIsCES':
+		case 'SERVER_CHOCES':
 			return {
 				...state,
 				...action.info

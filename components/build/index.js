@@ -28,16 +28,15 @@ class BuildPage extends React.Component {
 	render() {
         let actualPage = this.props.actualPage;
         let steps = this.props.choices.steps;
-        console.log('aquiiijsdfksd', this.props)
 		return (
 			<div>
                 <Container>
                     {this.renderPage(actualPage)}
                 </Container>
-                <Summary 
+                {steps && <Summary 
                     steps = {steps}
                     total = {this.sum(steps)}    
-                />
+                />}
 			</div>
 		);
 	}
