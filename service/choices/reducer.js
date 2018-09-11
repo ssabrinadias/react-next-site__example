@@ -2,10 +2,15 @@ const INITIAL_STATE = {};
 
 const choices = (state = INITIAL_STATE, action) => {
 	switch (action.type) {
-		case 'SERVER_CHOCES':
+		case 'SERVER_CHOICES':
 			return {
 				...state,
-				...action.info
+				steps : {
+					...action.data[0],
+					...action.data[1],
+					...action.data[2],
+					...action.data[3]
+				}
 			};
 		case 'UPDATE_ENGINE':
 			return {

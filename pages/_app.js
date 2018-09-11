@@ -14,7 +14,7 @@ class MyApp extends App {
     let { req, store } = ctx;
     if(req) {
       const general = await generalServer({store})
-      // await choicesServer({store, general})
+      await choicesServer({store, general})
 
     }
     if (Component.getInitialProps) {

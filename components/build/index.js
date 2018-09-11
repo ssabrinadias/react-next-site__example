@@ -28,6 +28,7 @@ class BuildPage extends React.Component {
 	render() {
         let actualPage = this.props.actualPage;
         let steps = this.props.choices.steps;
+        console.log(':)', this.props)
 		return (
 			<div>
                 <Container>
