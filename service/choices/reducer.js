@@ -9,7 +9,8 @@ const choices = (state = INITIAL_STATE, action) => {
 					...action.data[0],
 					...action.data[1],
 					...action.data[2],
-					...action.data[3]
+					...action.data[3],
+					...state.steps
 				}
 			};
 		case 'UPDATE_ENGINE':
@@ -18,11 +19,7 @@ const choices = (state = INITIAL_STATE, action) => {
 				steps : {
 					...state.steps,
 					engine: {
-						id: action.engine.id,
-						type: action.engine.type,
-						kwh: action.engine.kwh, 
-						price: action.engine.price,
-						range: action.engine.range
+						...action.engine
 					}
 				}
 			};
@@ -37,6 +34,16 @@ const choices = (state = INITIAL_STATE, action) => {
 						}
 					}
 				};
+		case 'UPDATE_COLOR':
+			return {
+				...state,
+				steps : {
+					...state.steps,
+					color: {
+						...action.color
+					}
+				}
+			};
 		default:
 			return state;
 	}

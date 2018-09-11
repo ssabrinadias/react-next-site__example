@@ -39,6 +39,10 @@
                     color: $primary-color;
                 }
             }
+            
+            &:last-child {
+                display: block;
+            }
                     
             @include breakpoint(medium)  {
                 &:nth-child(2) {

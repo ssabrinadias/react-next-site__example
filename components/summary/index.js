@@ -29,8 +29,8 @@ const summary = ({steps, total}) => {
                     <li>
                         <Button
                             class= 'button'
-                            mask = '/build/engine'
-                            link = '/build?step=engine'
+                            mask = '/build/color'
+                            link = '/build?step=color'
                             status = 'start'
                             text = 'next'
                         />

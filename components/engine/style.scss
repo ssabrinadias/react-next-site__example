@@ -40,6 +40,10 @@
         position: relative;
         margin-top: 10px;  
         z-index: 10;
+        margin-bottom: 95px;
+        @include breakpoint(large)  {
+            margin-bottom: 0px;            
+        }
         @include breakpoint(large)  {
             margin-top: 80px;    
             flex-direction: row;
@@ -47,13 +51,14 @@
         &List {
             &>li {
                 display: block;
-                height: 90px;
+                height: 75px;
                 background: $bg-color;
-                padding: 12px;
+                padding: 0 12px;
                 box-sizing: border-box;
                 color: #A8A8A8;
-                margin-top: 10px;
-                @include breakpoint(large)  {           
+                margin-top: 40px;
+                @include breakpoint(large)  {
+                    height: 90px;           
                     margin-top: 50px; 
                 }
                 ul {
@@ -97,10 +102,14 @@
                             }
                             span {
                                 display: block;
-                                width: 22px;
-                                height: 22px;
+                                width: 15px;
+                                height: 15px;
                                 background: #fff;
                                 border-radius: 122px;
+                                @include breakpoint(medium)  {
+                                    width: 22px;
+                                    height: 22px;
+                                }
                             }
                             .itemsPrice {
                                 display: none;
@@ -129,8 +138,11 @@
                                 background: $primary-color;
                             }
                             
+                            
                             .itemsPrice {
-                                display: block;
+                                @include breakpoint(large)  {
+                                    display: block;
+                                }
                             }
                         }
                     }

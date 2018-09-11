@@ -2,6 +2,7 @@ import React from 'react';
 import {withRouter} from 'next/router'
 import Layout from '../../components/layout'
 import { connect } from 'react-redux';
+import Error from 'next/error'
 import BuildComp from '../../components/build'
 
 class Build extends React.Component {
@@ -10,7 +11,7 @@ class Build extends React.Component {
 	}
 	
 	checkPage(actual){
-		let pages = ['engine', 'colors', 'wheels']
+		let pages = ['engine', 'color', 'wheels']
 		return (pages.indexOf(actual)>=0);
 	}
 
@@ -23,7 +24,7 @@ class Build extends React.Component {
 					{validate ? (
 						<BuildComp actualPage={page}/>
 					) : (
-						<div>pagina nao existe</div> //todo nao existente
+						<Error statusCode={404} />
 					)}
 					
 				</main>

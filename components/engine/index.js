@@ -3,8 +3,7 @@ import { connect } from 'react-redux';
 import {bindActionCreators} from 'redux'
 import style from './style.scss';
 import {actionEngine} from './action';
-import engineOne from '../../static/images/engine-1.png'
-import engineTwo from '../../static/images/engine-2.png'
+import currencyformat from '../currencyformat'
 
 class Engine extends React.Component {
 	constructor(props) {
@@ -52,7 +51,7 @@ class Engine extends React.Component {
                                 onChange = {e=> this.changeOption(e)}
                                 checked = {activeInput}
                             />
-                            {id!=1 && (<div className={style.itemsPrice}>+${price}</div>)}
+                            {id!=1 && (<div className={style.itemsPrice}>+${currencyformat(price)}</div>)}
                         </li>
                     </ul>
                 </label>                

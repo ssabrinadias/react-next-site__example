@@ -12,6 +12,5 @@ export default async ({general: {data}, store}) => {
         price: data.price,
         name: 'Model R'
     }})
-    console.log(firstChoices[0].engine)
     return store.dispatch(serverChoices(firstChoices));
 };
