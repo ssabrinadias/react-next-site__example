@@ -12,13 +12,12 @@ import dot6 from '../../static/images/color/dot-grey.png'
 class Color extends React.Component {
 	constructor(props) {
         super(props);
-        const firstChoice = firstChoice ||  props.color.items[0];
         
         this.state = {
-            image: firstChoice.image,
-            label: firstChoice.label,
-            price: firstChoice.price,
-            selected : firstChoice.id,
+            image: props.choices.image,
+            label: props.choices.label,
+            price: props.choices.price,
+            selected : props.choices.id,
         }
     }
 
@@ -72,7 +71,6 @@ class Color extends React.Component {
 
                 <div className={style.bottom}>
                     <div className={style.colorImage}>
-                        {/* imgOffset equilibra imagem de tamanho diferente */}
                         <img src={this.state.image} className={this.state.selected == '4' ? style.imgOffset : ''}/>
 
                         <label>
@@ -100,10 +98,10 @@ class Color extends React.Component {
 	}
 }
 
-const mapStateToProps = (props) => (
+const mapStateToProps = ({general:{data}, choices:{steps}}) => (
     {           
-        color: props.general.data.color,
-        geral: props
+        color: data.color,
+        choices: steps.color
     }
 );
 

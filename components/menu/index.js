@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link'
 import style from './style.scss';
 
 const menu = props => {
@@ -6,23 +7,33 @@ const menu = props => {
         <nav className={style.menu}>
             <ul className={style.menuList}>
                 <li className={style.menuListItem}>
-                    <a href="#" className={style.active}>Model R</a>
+                    <Link as={'/'} href={'/'}>
+                        <a className={style.active}>Model R</a>
+                    </Link>
                 </li>
 
                 <li className={style.menuListItem}>
-                    <a href="#">Model IQ</a>
+                    <Link as={'/'} href={'/'}>
+                        <a >Model IQ</a>
+                    </Link>
                 </li>
 
                 <li className={style.menuListItem}>
-                    <a href="#">Model Mobi</a>
+                    <Link as={'/'} href={'/'}>
+                        <a >Model Mobi</a>
+                    </Link>
                 </li>
 
                 <li className={style.menuListItem}>
-                    <a href="#">Model Charlie</a>
+                    <Link as={'/'} href={'/'}>
+                        <a >Model Charlie</a>
+                    </Link>
                 </li>
 
                 <li className={style.menuListItem}>
-                    <a href="#">Model Italy</a>
+                    <Link as={'/'} href={'/'}>
+                        <a >Model Italy</a>
+                    </Link>
                 </li>
 
             </ul>

@@ -8,13 +8,10 @@ import currencyformat from '../currencyformat'
 class Engine extends React.Component {
 	constructor(props) {
         super(props);
-        const firstChoice = props.engines[Object.keys(props.engines)[0]];
-
-        // props.actionEngine(firstChoice)
         
         this.state = {
-            image: firstChoice.image,
-            selected : firstChoice.id,
+            image: props.choice.image,
+            selected : props.choice.id,
         }
     }
 
@@ -88,10 +85,10 @@ class Engine extends React.Component {
 	}
 }
 
-const mapStateToProps = (props) => (
+const mapStateToProps = ({general :{data :{engine}}, choices:{steps}}) => (
     {
-        engines: props.general.data.engine.items,
-        geral: props
+        engines: engine.items,
+        choice: steps.engine
     }
 );
 

@@ -9,10 +9,9 @@ import style from './style.scss';
 class Wheels extends React.Component {
 	constructor(props) {
         super(props);
-        const firstChoice = firstChoice ||  props.wheels.items[0];
         
         this.state = {
-            selected : firstChoice.id
+            selected : props.choice.id
         }
     }
 
@@ -74,10 +73,10 @@ class Wheels extends React.Component {
 	}
 }
 
-const mapStateToProps = (props) => (
+const mapStateToProps = ({general:{data}, choices:{steps}}) => (
     {           
-        wheels: props.general.data.wheels,
-        geral: props
+        wheels: data.wheels,
+        choice: steps.wheels
     }
 );
 
