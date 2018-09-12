@@ -9,7 +9,7 @@ export default async ({store}) => {
 			return response.data;
 		})
 		.catch(function(error) {
-			return error;
+			return false;
         });
     return teste;
 };

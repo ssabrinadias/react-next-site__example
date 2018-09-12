@@ -1,5 +1,6 @@
 import React from 'react'
 import App, {Container} from 'next/app'
+import Error from 'next/error'
 import withRedux from 'next-redux-wrapper';
 import { initializeStore } from '../store';
 import { Provider } from 'react-redux';
@@ -14,6 +15,7 @@ class MyApp extends App {
     let { req, store } = ctx;
     if(req) {
       const general = await generalServer({store})
+      if(!general) return true
       await choicesServer({store, general})
 
     }
@@ -25,7 +27,10 @@ class MyApp extends App {
   }
 
   render() {
-		const { Component, store, pageProps } = this.props;
+    const { Component, store, pageProps } = this.props;
+    if(!pageProps) {
+      return (<Error status={404} />)
+    }
 		return (
 			<Provider store={store}>
 				<Component {...pageProps} />

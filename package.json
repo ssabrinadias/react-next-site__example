@@ -17,9 +17,11 @@
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-redux": "^5.0.7",
+    "react-slick": "^0.23.1",
     "redux": "^3.7.2",
     "redux-devtools-extension": "^2.13.2",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "babel-plugin-module-resolver": "^3.1.1",

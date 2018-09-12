@@ -25,7 +25,7 @@ const layout = props => {
                     <Button
                         mask = '/build/engine'
                         link = '/build?step=engine'
-                        status = 'start'
+                        status = 'btnNext'
                         text = 'BEGIN'
                     />
 

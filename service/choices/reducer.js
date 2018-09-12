@@ -44,6 +44,16 @@ const choices = (state = INITIAL_STATE, action) => {
 					}
 				}
 			};
+		case 'UPDATE_WHEELS':
+			return {
+				...state,
+				steps : {
+					...state.steps,
+					wheels: {
+						...action.wheels
+					}
+				}
+			};
 		default:
 			return state;
 	}

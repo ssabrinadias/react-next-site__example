@@ -26,6 +26,16 @@
         }
         li {
             display: none;
+
+            img.dot {
+                width: 22px;
+                height: auto;
+            }
+            img.wheels {
+                width: 32px;
+                height: auto;
+            }
+
             &:first-child {
                 display: block;
                 font-size: 16px;

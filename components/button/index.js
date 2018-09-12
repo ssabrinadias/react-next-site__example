@@ -4,7 +4,7 @@ import carHome from '../../static/images/car-home.png'
 import Link from 'next/link'
 
 const Button = ({mask, link, text, status, classAdd}) => (
-    <div className={[style.btn, style[classAdd]].join(' ')}>
+    <div className={[style.btn, style[status], style[classAdd]].join(' ')}>
         <Link as={mask} href={link}>
             <a>{text}</a>
         </Link>
