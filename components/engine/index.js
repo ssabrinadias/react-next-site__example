@@ -10,7 +10,7 @@ class Engine extends React.Component {
         super(props);
         const firstChoice = props.engines[Object.keys(props.engines)[0]];
 
-        props.actionEngine(firstChoice)
+        // props.actionEngine(firstChoice)
         
         this.state = {
             image: firstChoice.image,

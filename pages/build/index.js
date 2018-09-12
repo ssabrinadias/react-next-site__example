@@ -11,7 +11,7 @@ class Build extends React.Component {
 	}
 	
 	checkPage(actual){
-		let pages = ['engine', 'color', 'wheels']
+		let pages = ['engine', 'color', 'wheels', 'results']
 		return (pages.indexOf(actual)>=0);
 	}
 
@@ -26,7 +26,6 @@ class Build extends React.Component {
 					) : (
 						<Error statusCode={404} />
 					)}
-					
 				</main>
 			</Layout>
 		);

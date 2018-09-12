@@ -11,7 +11,7 @@ import dot6 from '../../static/images/color/dot-grey.png'
 const summary = ({steps, total, page}) => { 
     
     const dots = [dot4, dot5, dot6];
-    const pages = ['engine', 'color', 'wheels', 'result']
+    const pages = ['engine', 'color', 'wheels', 'results']
     
     const items = (steps) => {
         let stopShow = false;

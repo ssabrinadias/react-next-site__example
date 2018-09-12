@@ -6,6 +6,7 @@ import Engine from '../engine'
 import Color from '../color'
 import Wheels from '../wheels'
 import Summary from '../summary'
+import Results from '../results'
 import currencyformat from '../currencyformat'
 
 class BuildPage extends React.Component {
@@ -22,7 +23,10 @@ class BuildPage extends React.Component {
                 return <Color/>     
                 
             case 'wheels': 
-                return <Wheels/> 
+                return <Wheels/>
+                
+            case 'results': 
+                return <Results/>  
         }
     }
     
@@ -42,7 +46,7 @@ class BuildPage extends React.Component {
                 <Container>
                     {this.renderPage(actualPage)}
                 </Container>
-                {steps && <Summary 
+                {steps && actualPage!= "results" && <Summary 
                     steps = {steps}
                     page = {actualPage}
                     total = {this.updateTotal(steps)}    

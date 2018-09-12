@@ -1,0 +1,87 @@
+@import "../../static/style/abstracts/_mixins";
+@import "../../static/style/abstracts/_variables";
+
+
+.result {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;   
+
+    @include breakpoint(medium)  {
+        flex-direction: row;    
+        height: calc(100vh - 60px);
+        align-items: center; 
+    }
+    &Image {
+        margin: 126px 0 77px;
+
+        @include breakpoint(medium)  {
+            margin: 0;            
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+    &Description {
+        width: 100%;
+        max-width: 480px;
+        @include breakpoint(medium)  {
+            padding-left: 25px; 
+        }
+        a {
+            margin-top: 60px;
+        }
+        
+        &Title {
+            position: absolute;
+            top: 30px;
+            padding: 0 0 25px;
+            font-weight: $fontLight;
+            @include breakpoint(medium)  {
+                position: relative;
+                top: 0;
+            }
+            span {                
+                font-weight: $fontRegular;
+                &:last-child {
+                    color: $primary-color;
+                }
+            }
+        }
+
+        &List {
+            display: block;
+            width: 100%;
+            & > li {
+                display: flex;
+                justify-content: space-between;
+                padding: 25px 0;
+                font-size: 22px;
+                font-weight: $fontRegular;
+                
+                &:first-child {
+                    border-bottom: 1px solid #ccc;
+                }
+                
+                &:last-child {
+                    border-top: 1px solid #ccc;
+                    shape-margin: 30px;
+                    font-size: 32px;
+
+                    div:last-child {
+                       font-weight: $fontMedium 
+                    }
+                }
+
+                div {
+                    &:last-child {
+                        color: $primary-color
+                    }
+                }
+            }
+        }
+    }
+}
