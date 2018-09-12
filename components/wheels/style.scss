@@ -1,46 +1,50 @@
-@import '../build/style.scss';
+@import "../build/style.scss";
 @import "../../static/style/abstracts/_variables";
 @import "../../static/style/abstracts/_mixins";
-.wheels {   
+.wheels {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 104px;
+
+  input {
+    display: none;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  &Options {
     display: flex;
-    flex-direction: column;     
-    align-items: center;
-    width: 100%;
-    margin-top: 104px; 
-    
-    input {
+    margin-top: 110px;
+    justify-content: space-between;
+    li {
+      .description {
         display: none;
+        flex-direction: column;
+        align-items: center;
+        font-weight: $fontRegular;
+        font-size: 22px;
+        span {
+          color: $primary-color;
+        }
+      }
+      img {
+        transform: scale(0.89);
+        opacity: 0.5;
+        width: 100%;
+      }
+    }
+  }
+  .active {
+    .description {
+      display: flex;
     }
 
-    &Options {
-        display: flex;
-        margin-top: 110px;
-        li {
-            .description {
-                display: none;
-                flex-direction: column;
-                align-items: center;
-                font-weight: $fontRegular;
-                font-size: 22px;
-                span {
-                    color: $primary-color;
-                }
-            }
-            img {
-                transform: scale(0.89);
-                opacity: 0.5;
-            }
-        }
-        
+    img {
+      transform: scale(1);
+      opacity: 1;
     }
-    .active {
-        .description {
-            display: flex;
-        }
-        
-        img {
-            transform: scale(1.0);
-            opacity: 1;
-        }
-    }
+  }
 }
