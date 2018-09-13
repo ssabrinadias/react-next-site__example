@@ -1,0 +1,7 @@
+_tmp
+_next
+.next
+_error/
+dist/
+
+package-lock.json
