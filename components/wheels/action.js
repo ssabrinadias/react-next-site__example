@@ -1,6 +1,6 @@
-export const actionWheels = (wheels) => {
-    return {
-        type:'UPDATE_WHEELS',
-        wheels
-    }
-}
+export const actionWheels = wheels => {
+	return {
+		type: "UPDATE_WHEELS",
+		wheels
+	};
+};

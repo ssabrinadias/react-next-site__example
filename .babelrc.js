@@ -1,30 +1,32 @@
-const path = require('path');
-const aliases = require('./configs/aliases');
-
+const path = require("path");
+const aliases = require("./configs/aliases");
 
 module.exports = {
 	env: {
 		development: {
-			presets: ['next/babel']
+			presets: ["next/babel"]
 		},
 		production: {
-			presets: ['next/babel']
+			presets: ["next/babel"]
 		},
 		test: {
 			presets: [
 				[
-					'next/babel',
+					"next/babel",
 					{
-						'preset-env': {
-							modules: 'commonjs'
+						"preset-env": {
+							modules: "commonjs"
 						}
 					}
 				]
 			],
 			plugins: [
-				["module-resolver", {
-					"alias": aliases
-				}]
+				[
+					"module-resolver",
+					{
+						alias: aliases
+					}
+				]
 			]
 		}
 	}

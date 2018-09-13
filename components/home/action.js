@@ -1,6 +1,6 @@
-export const actionModel = (car) => {
-    return {
-        type:'UPDATE_MODEL',
-        car
-    }
-}
+export const actionModel = car => {
+	return {
+		type: "UPDATE_MODEL",
+		car
+	};
+};

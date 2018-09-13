@@ -1,6 +1,6 @@
-export const actionColor = (color) => {
-    return {
-        type:'UPDATE_COLOR',
-        color
-    }
-}
+export const actionColor = color => {
+	return {
+		type: "UPDATE_COLOR",
+		color
+	};
+};

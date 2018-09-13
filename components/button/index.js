@@ -4,11 +4,11 @@ import carHome from "../../static/images/car-home.png";
 import Link from "next/link";
 
 const Button = ({ mask, link, text, status, classAdd }) => (
-  <div className={[style.btn, style[status], style[classAdd]].join(" ")}>
-    <Link prefetch as={mask} href={link}>
-      <a>{text}</a>
-    </Link>
-  </div>
+	<div className={[style.btn, style[status], style[classAdd]].join(" ")}>
+		<Link prefetch as={mask} href={link}>
+			<a>{text}</a>
+		</Link>
+	</div>
 );
 
 export default Button;

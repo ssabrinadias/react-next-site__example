@@ -4,5 +4,8 @@ _next
 _error/
 dist
 dist/
+server/
+next.config.js
+
 
 package-lock.json

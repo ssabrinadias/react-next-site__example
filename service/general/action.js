@@ -1,6 +1,6 @@
 export default info => dispatch => {
 	return dispatch({
-		type: 'SERVER_GENERAL',
+		type: "SERVER_GENERAL",
 		info
 	});
 };

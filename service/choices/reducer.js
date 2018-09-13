@@ -2,10 +2,10 @@ const INITIAL_STATE = {};
 
 const choices = (state = INITIAL_STATE, action) => {
 	switch (action.type) {
-		case 'SERVER_CHOICES':
+		case "SERVER_CHOICES":
 			return {
 				...state,
-				steps : {
+				steps: {
 					...action.data[0],
 					...action.data[1],
 					...action.data[2],
@@ -13,41 +13,41 @@ const choices = (state = INITIAL_STATE, action) => {
 					...state.steps
 				}
 			};
-		case 'UPDATE_ENGINE':
+		case "UPDATE_ENGINE":
 			return {
 				...state,
-				steps : {
+				steps: {
 					...state.steps,
 					engine: {
 						...action.engine
 					}
 				}
 			};
-		case 'UPDATE_MODEL':
-				return {
-					...state,
-					steps : {
-						...state.steps,
-						car: {
-							name: action.car.name,
-							price: action.car.price
-						}
-					}
-				};
-		case 'UPDATE_COLOR':
+		case "UPDATE_MODEL":
 			return {
 				...state,
-				steps : {
+				steps: {
+					...state.steps,
+					car: {
+						name: action.car.name,
+						price: action.car.price
+					}
+				}
+			};
+		case "UPDATE_COLOR":
+			return {
+				...state,
+				steps: {
 					...state.steps,
 					color: {
 						...action.color
 					}
 				}
 			};
-		case 'UPDATE_WHEELS':
+		case "UPDATE_WHEELS":
 			return {
 				...state,
-				steps : {
+				steps: {
 					...state.steps,
 					wheels: {
 						...action.wheels
