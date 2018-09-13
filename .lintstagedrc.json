@@ -1,4 +1,0 @@
-{
-	"*.js": [ "prettier --write", "git add"],
-	"*.{css,scss}": [ "prettier --write", "git add"]
-}

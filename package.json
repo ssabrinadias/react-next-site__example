@@ -9,6 +9,7 @@
 		"autoprefixer": "^8.6.2",
 		"axios": "^0.18.0",
 		"babel-loader": "^7.1.4",
+		"eslint-plugin-prettier": "^2.6.2",
 		"express": "^4.16.3",
 		"next": "^6.1.1",
 		"next-compose-plugins": "^2.1.1",
@@ -20,7 +21,8 @@
 		"react-slick": "^0.23.1",
 		"redux": "^3.7.2",
 		"redux-devtools-extension": "^2.13.2",
-		"redux-thunk": "^2.2.0"
+		"redux-thunk": "^2.2.0",
+		"uninstall": "0.0.0"
 	},
 	"devDependencies": {
 		"babel-plugin-module-resolver": "^3.1.1",
