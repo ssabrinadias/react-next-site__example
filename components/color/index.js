@@ -67,10 +67,7 @@ class Color extends React.Component {
 
         <div className={style.bottom}>
           <div className={style.colorImage}>
-            <img
-              src={this.state.image}
-              className={this.state.selected == "4" ? style.imgOffset : ""}
-            />
+            <img src={this.state.image} />
 
             <label>
               <p>{this.state.label}</p>

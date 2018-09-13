@@ -1,0 +1,17 @@
+@keyframes getUp {
+  from {
+    transform: translate(0px, 50px);
+  }
+  to {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes getIn {
+  from {
+    transform: translate(40px, 0px);
+  }
+  to {
+    transform: translate(0px, 0px);
+  }
+}

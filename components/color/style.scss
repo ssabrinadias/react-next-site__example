@@ -1,6 +1,7 @@
 @import "../build/style.scss";
 @import "../../static/style/abstracts/_variables";
 @import "../../static/style/abstracts/_mixins";
+@import "../../static/style/abstracts/_supports";
 
 .color {
   margin-top: 30px;
@@ -36,13 +37,9 @@
     }
   }
 
-  .imgOffset {
-    width: 87%;
-  }
-
   &Image {
     flex: 1;
-    min-height: 200px;
+    min-height: 230px;
     font-size: 22px;
     font-weight: $fontRegular;
     text-align: center;
@@ -64,6 +61,10 @@
       max-width: 580px;
       margin: auto;
       margin-bottom: -20px;
+      @extend %transition;
+      &:hover {
+        transform: scale(1.1);
+      }
 
       @media only screen and (min-width: 800px) {
         left: -15%;
@@ -93,6 +94,10 @@
           width: 44px;
           height: 44px;
           margin: 22px;
+          @extend %transition;
+          &:hover {
+            transform: scale(1.1);
+          }
         }
         input {
           display: none;
@@ -101,6 +106,7 @@
         label {
           position: relative;
           z-index: 20;
+          cursor: pointer;
         }
         &:before {
           content: "";

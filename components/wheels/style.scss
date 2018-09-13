@@ -1,6 +1,8 @@
 @import "../build/style.scss";
 @import "../../static/style/abstracts/_variables";
 @import "../../static/style/abstracts/_mixins";
+@import "../../static/style/abstracts/_supports";
+
 .wheels {
   display: flex;
   flex-direction: column;
@@ -36,6 +38,7 @@
         font-weight: $fontRegular;
         font-size: 22px;
         text-align: center;
+        cursor: pointer;
         span {
           color: $primary-color;
         }
@@ -45,6 +48,7 @@
         opacity: 0.5;
         max-width: 100%;
         margin: auto;
+        @extend %transition;
       }
     }
   }

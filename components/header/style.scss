@@ -1,15 +1,16 @@
 @import "../../static/style/abstracts/_mixins";
 header {
-    // flex-basis: 243px;
-    display: inline-block;
-    flex: 1;
-    max-width: 265px;
+  // flex-basis: 243px;
+  display: inline-block;
+  flex: 1;
+  max-width: 265px;
+  min-width: 215px;
+  img {
+    width: 156px;
+  }
+  @include breakpoint(large) {
     img {
-        width: 156px;
+      width: auto;
     }
-    @include breakpoint(large)  {
-        img {
-            width: auto;
-        }
-    }
+  }
 }
