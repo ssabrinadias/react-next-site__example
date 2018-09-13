@@ -1,6 +1,10 @@
 @import "../../static/style/abstracts/_variables";
 
-.title{
+.title {
+  font-size: 22px;
+  font-weight: $fontLight;
+  letter-spacing: 3.75px;
+  @media only screen and (min-width: 800px) {
     font-size: 45px;
-    font-weight: $fontLight;
+  }
 }

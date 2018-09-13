@@ -1,20 +1,20 @@
-@import '../../static/style/abstracts/_supports';
+@import "../../static/style/abstracts/_supports";
 
-%common {    
-    display: flex;
-    width: 100%;
-    max-width: 1260px;  
-    min-width: 390px;
-    margin: auto;
-    box-sizing: border-box;
+%common {
+  display: flex;
+  width: 100%;
+  max-width: 1260px;
+  min-width: 360px;
+  margin: auto;
+  box-sizing: border-box;
 }
 .container {
-    @extend %common;
-    @extend %defaultPadding;
+  @extend %common;
+  @extend %defaultPadding;
 }
 
 .containerFluid {
-    @extend %common;  
-    @extend %defaultPadding;  
-    padding-right: 0;
+  @extend %common;
+  @extend %defaultPadding;
+  padding-right: 0;
 }

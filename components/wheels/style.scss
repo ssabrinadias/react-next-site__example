@@ -5,24 +5,29 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-top: 104px;
-
+  margin: 30px 0 60px;
+  @include breakpoint(medium) {
+    margin: 104px 0 0;
+  }
   input {
     display: none;
   }
 
   .title {
-    text-align: center;
+    text-align: left;
+    @include breakpoint(medium) {
+      text-align: center;
+    }
   }
 
   &Options {
-    // display: flex;
     margin-top: 110px;
     margin-left: -25px;
+    margin-right: -25px;
     @include breakpoint(medium) {
       margin-left: 0;
+      margin-right: 0;
     }
-    // justify-content: space-between;
     &Item {
       .description {
         display: none;

@@ -1,153 +1,160 @@
-@import '../build/style.scss';
+@import "../build/style.scss";
 @import "../../static/style/abstracts/_variables";
 @import "../../static/style/abstracts/_mixins";
 
 .engine {
-    display: flex;
-    width: 100%;
-    justify-content: space-between; 
-    flex-direction: column;
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: column;
 
-    @include breakpoint(large)  {
-        flex-direction: row;  
+  .title {
+    position: absolute;
+    top: 30px;
+    @include breakpoint(large) {
+      position: relative;
+      top: 0;
     }
+  }
+  @include breakpoint(large) {
+    flex-direction: row;
+  }
 
-    &Image {
+  &Image {
+    display: block;
+    transform: rotate(90deg);
+    height: 100vw;
+    overflow: hidden;
+    margin: 30px 0 -58%;
+
+    @include breakpoint(large) {
+      height: auto;
+      width: 100%;
+      flex-basis: 360px;
+      margin: 0;
+      overflow: initial;
+      transform: rotate(0);
+    }
+    img {
+      display: block;
+      height: 100vw;
+      @include breakpoint(large) {
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+  &Options {
+    margin-top: 10px;
+    z-index: 10;
+    margin-bottom: 95px;
+    @include breakpoint(large) {
+      margin-bottom: 0px;
+    }
+    @include breakpoint(large) {
+      margin-top: 80px;
+      flex-direction: row;
+    }
+    &List {
+      & > li {
         display: block;
-        transform: rotate(90deg);
-        height: 100vw;
-        overflow: hidden;
-        margin-bottom: -50%;
+        height: 75px;
+        background: $bg-color;
+        padding: 0 12px;
+        box-sizing: border-box;
+        color: #a8a8a8;
+        margin-top: 40px;
+        @include breakpoint(large) {
+          height: 90px;
+          margin-top: 50px;
+        }
+        ul {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          height: 100%;
+          letter-spacing: 2.83px;
 
-        @include breakpoint(large)  {            
-            margin-bottom: 0;
-            overflow: initial;
-            flex-basis: 360px;
-            transform: rotate(0);
-            width: 100%;
-            height: auto;
-        }
-        img {
-            display: block;
-            height: 100vw;
-            @include breakpoint(large)  {
-                height: auto;
-                width: 100%;
+          li {
+            @include breakpoint(large) {
+              padding: 30px;
             }
-        }
-    }
-    &Options {             
-        position: relative;
-        margin-top: 10px;  
-        z-index: 10;
-        margin-bottom: 95px;
-        @include breakpoint(large)  {
-            margin-bottom: 0px;            
-        }
-        @include breakpoint(large)  {
-            margin-top: 80px;    
-            flex-direction: row;
-        }
-        &List {
-            &>li {
+
+            &:nth-child(1) {
+              font-size: 22px;
+              @include breakpoint(large) {
+                font-size: 34px;
+              }
+              font-weight: $fontLight;
+              span {
+                font-weight: $fontMedium;
+              }
+            }
+            &:nth-child(2),
+            &:nth-child(3) {
+              font-size: 16px;
+              font-weight: $fontMedium;
+              @include breakpoint(large) {
+                font-size: 22px;
+              }
+              span {
+                font-weight: $fontRegular;
+              }
+            }
+            &:nth-child(4) {
+              position: relative;
+              input[type="radio"] {
+                display: none;
+              }
+              span {
                 display: block;
-                height: 75px;
-                background: $bg-color;
-                padding: 0 12px;
-                box-sizing: border-box;
-                color: #A8A8A8;
-                margin-top: 40px;
-                @include breakpoint(large)  {
-                    height: 90px;           
-                    margin-top: 50px; 
+                width: 15px;
+                height: 15px;
+                background: #fff;
+                border-radius: 122px;
+                @include breakpoint(medium) {
+                  width: 22px;
+                  height: 22px;
                 }
-                ul {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    width: 100%;
-                    height: 100%;
-                    letter-spacing: 2.83px;
-
-                    li {                        
-                        @include breakpoint(large)  {
-                            padding: 30px;  
-                        }
-                        
-                        &:nth-child(1) {
-                            font-size: 22px;
-                            @include breakpoint(large)  {
-                                font-size: 34px;
-                            }
-                            font-weight: $fontLight;
-                            span {
-                                font-weight: $fontMedium;
-                            }
-                        }
-                        &:nth-child(2),
-                        &:nth-child(3) {
-                            font-size: 16px;
-                            font-weight: $fontMedium;
-                            @include breakpoint(large)  {
-                                font-size: 22px;
-                            }
-                            span {
-                                font-weight: $fontRegular;
-                            }
-                        }
-                        &:nth-child(4) {
-                            position: relative;
-                            input[type="radio"] {
-                                display: none;
-                            }
-                            span {
-                                display: block;
-                                width: 15px;
-                                height: 15px;
-                                background: #fff;
-                                border-radius: 122px;
-                                @include breakpoint(medium)  {
-                                    width: 22px;
-                                    height: 22px;
-                                }
-                            }
-                            .itemsPrice {
-                                display: none;
-                                position: absolute;
-                                bottom: -30px;
-                                right: 0;
-                                font-size: 22px;
-                                font-weight: $fontRegular;
-                                color: $primary-color
-                            }
-                        }
-                    }
-                }
-            }            
-            .active {
-                color: $secondary-color;
-                ul {
-                    li {
-                        &:nth-child(1) {
-                            span {
-                                color: $primary-color
-                            }
-                        }
-                        &:nth-child(4) {
-                            span {
-                                background: $primary-color;
-                            }
-                            
-                            
-                            .itemsPrice {
-                                @include breakpoint(large)  {
-                                    display: block;
-                                }
-                            }
-                        }
-                    }
-                }
+              }
+              .itemsPrice {
+                display: none;
+                position: absolute;
+                bottom: -30px;
+                right: 0;
+                font-size: 22px;
+                font-weight: $fontRegular;
+                color: $primary-color;
+              }
             }
+          }
         }
+      }
+      .active {
+        color: $secondary-color;
+        ul {
+          li {
+            &:nth-child(1) {
+              span {
+                color: $primary-color;
+              }
+            }
+            &:nth-child(4) {
+              span {
+                background: $primary-color;
+              }
+
+              .itemsPrice {
+                @include breakpoint(large) {
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
     }
+  }
 }

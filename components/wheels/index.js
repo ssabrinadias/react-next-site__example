@@ -40,7 +40,7 @@ class Wheels extends React.Component {
           <div className={style.description}>
             <p>{label}</p>
 
-            <span>{price ? currencyformat(price) : "included"}</span>
+            <span>{price ? `+ $${currencyformat(price)}` : "included"}</span>
           </div>
 
           <input
@@ -81,13 +81,6 @@ class Wheels extends React.Component {
             )}
           </Slider>
         </div>
-        {/* <div>
-                    <ul className={style.wheelsOptions}>
-                        {this.props.wheels.items.map(({id, label,image, price})=>(
-                            this.wheelsOptions({id, label,image, price})
-                        ))}
-                    </ul>
-                </div> */}
       </section>
     );
   }
