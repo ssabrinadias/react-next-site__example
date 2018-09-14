@@ -61,6 +61,10 @@ module.exports = withPlugins(
 					importLoaders: 1,
 					localIdentName: '[path][name]__[local]',
 					includePaths : 'node_modules'
+				},
+				postcssLoaderOptions: {
+					parser: true,
+					autoprefixer: true
 				}
 			}
 		],
