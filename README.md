@@ -1,35 +1,45 @@
-# Red Ventures - Front Test
+#Red Ventures - Front Test
+
+### Technologies
+
+- React
+- Next.js
+- Webpack
+- Express.js
+- Redux
+- Babel
+- Axios
 
 ### Requirement
 
 - [Node](https://nodejs.org/en/) version 8
 - [npm](https://www.npmjs.com/) version 5
 
-### Starting the project
+###Starting the project
 
-#### Installation
+####Installation
 
-bash
-
-# Installing the project dependencies
-
+```bash
+#Installing the project dependencies
 npm install
+```
 
-#### Development environment
+####Development environment
 
-bash
+```bash
 npm run dev
+```
 
-#### Production environment
+####Production environment
 
-bash
+#Build of the project
 
-# Build of the project
-
+```bash
 npm run build
+```
 
-bash
+#Start server
 
-# Start server
-
+```bash
 npm start
+```
