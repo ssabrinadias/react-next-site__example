@@ -32,7 +32,7 @@ npm run dev
 
 ###Production environment
 
-####Build of the project
+####Building the project
 
 ```bash
 npm run build
@@ -42,14 +42,14 @@ npm run build
 
 ```bash
 npm start
-```
 
-```bash
 Running on port http://localhost:3000
 ```
 
 ####Note
 
 ```bash
-The package node-sass is occurring error on some cases during the installation. In Operational Systems that need permission to create folders is necessary to force the installation by use of the config "--unsafe-perm "
+The package node-sass is occurring error on some cases during the installation.
+In Operational Systems that need permission to create folders is necessary to force the installation 
+by use of the config "--unsafe-perm "
 ```
