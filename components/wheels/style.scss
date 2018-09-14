@@ -23,9 +23,10 @@
   }
 
   &Options {
-    margin-top: 110px;
+    margin-top: 80px;
     margin-left: -25px;
     margin-right: -25px;
+    margin-bottom: 20px;
     @include breakpoint(medium) {
       margin-left: 0;
       margin-right: 0;
