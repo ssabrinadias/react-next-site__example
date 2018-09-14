@@ -24,21 +24,21 @@
 npm install
 ```
 
-####Development environment
+###Development environment
 
 ```bash
 npm run dev
 ```
 
-####Production environment
+###Production environment
 
-#Build of the project
+####Build of the project
 
 ```bash
 npm run build
 ```
 
-#Start server
+####Start server
 
 ```bash
 npm start
